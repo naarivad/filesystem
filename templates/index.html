@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="naarivad.in asset server" property="og:title">
+    <meta content="A distributed asset server for all documents served on the main site." property="og:description">
+    <meta content="Server location: Falkenstein, DE" property="og:site_name">
+    <meta content="https://cdn.discordapp.com/avatars/824218465324892170/b9fc044fa3d5de470a2cee15bbc0943b.png" property="og:image">
+    <title>docs.naarivad.in</title>
+    <style>
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: -239%;
+      left: 55%;
+      margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: 52%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #555 transparent;
+    }
+    #popup1::after {
+        left: 32% !important;
+    }
+    #popup2::after {
+        left: 49% !important;
+    }
+    #popup4::after, #popup5::after {
+        left: 24% !important;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
+</head>
+<body>
+<!-- Hello there! Why are you here? No, not here on this website, but here looking at the source.
+If you're looking here, you might be able to help us as a developer / web designer.
+Shoot me a mail if you're interested: varun@varunj.tk -->
+<samp>
+    naarivad.in distributed asset server. Powered by <a href="https://actix.rs/">Actix Web</a> and
+    <a href="https://httpd.apache.org/">Apache</a>.<br><br>
+</samp>
+<div class="popup"><samp>Made with <span title="what is love?" onclick="randomPopup()">&#10084;&#65039;</span> by
+    <a href="https://github.com/darthshittious">VJ</a>.</samp>
+    <span class="popuptext" id="popup1"style="width: 260px">an intense feeling of deep affection</span>
+    <span class="popuptext" id="popup2" style="width: 170px">something we don't have</span>
+    <span class="popuptext" id="popup3" style="left: 79%; width: 96px"><a href="https://www.google.com/search?q=define%3A+love">define: love</a></span>
+    <span class="popuptext" id="popup4" style="width: 350px"><a href="https://www.youtube.com/watch?v=i0p1bmr0EmE">https://www.youtube.com/watch?v=i0p1bmr0EmE</a></span>
+    <span class="popuptext" id="popup5" style="width: 350px"><a href="https://www.youtube.com/watch?v=HEXWRTEbj1I">https://www.youtube.com/watch?v=HEXWRTEbj1I</a></span>
+
+</div>
+
+<script>
+function randomPopup() {
+    // first hide all popups
+    for (let i = 1; i < 6; i++) {
+        document.getElementById("popup" + i.toString()).classList.remove("show");
+    }
+    // show a random popup
+    document.getElementById("popup" + Math.floor(1 + Math.random() * 5).toString()).classList.add("show");
+}
+</script>
+
+</body>
+</html>
