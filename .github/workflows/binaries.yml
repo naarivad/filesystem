@@ -33,6 +33,7 @@ jobs:
             mkdir ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}
             cp -r templates ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}/templates
             cp -r static ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}/static
+            cp -r assets ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}/assets
             cp target/${{ matrix.arch.target }}/release/${{ env.PROJECT_NAME }} ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}/${{ env.PROJECT_NAME }}
             tar -czvf ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}.tar.gz ${{ env.PROJECT_NAME }}-${{ matrix.arch.target }}
 
