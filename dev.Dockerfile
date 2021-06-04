@@ -13,6 +13,7 @@ RUN cargo build --release
 FROM gcr.io/distroless/cc-debian10
 WORKDIR /usr/local/bin
 COPY --from=builder /app/target/release/filesystem .
+COPY --from=builder /app/assets ./assets
 COPY --from=builder /app/templates ./templates
 
 ENTRYPOINT ["filesystem"]

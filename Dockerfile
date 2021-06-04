@@ -9,6 +9,7 @@ RUN cargo install --path .
 FROM gcr.io/distroless/cc-debian10
 WORKDIR /usr/local/bin
 COPY --from=build /usr/local/cargo/bin/filesystem .
+COPY --from=build /usr/src/filesystem/assets ./assets
 COPY --from=build /usr/src/filesystem/templates ./templates
 
 CMD ["filesystem"]
