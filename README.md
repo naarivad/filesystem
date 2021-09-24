@@ -45,7 +45,7 @@ The image doesn't support ARM so if you want to run on a Raspberry Pi, say, you 
 5) `./filesystem` and look for any logs!
 
 ## License
-[AGPL v3.0](LICENSE) &copy; Varun J &lt;root@varunj.me&gt;
+[BSD-3-Clause](LICENSE) &copy; Varun J &lt;root@varunj.me&gt;
 
 ## Contributing
 
